@@ -169,6 +169,7 @@ print("\nFunctions evaluation for solution:")
 res = np.matrix([0.0, 0.0, 0.0, 0.0]).T
 eval_funcs(vn, res)
 print(res)
+print("Solution Error (infinity norm): " + str(np.linalg.norm(res, np.inf)))
 print("\nNumber of iterations: " + str(ite))
 print("Average execution time: " + str(np.mean(exec_times)) + " seconds")
 print("Standard deviation: " + str(np.std(exec_times)))
