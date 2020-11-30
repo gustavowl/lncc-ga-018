@@ -99,7 +99,7 @@ def newton(v0, debug=False):
             #for i in range(1, len(vn)):
             #    latex += " \\\\ " + str(vn[i,0]/np.pi)
             #print(latex)
-            print("\n||v_" + str(ite) + " - v_" + str(ite-1) + "||_2: " + str(inf_norm))
+            print("\n||v_" + str(ite) + " - v_" + str(ite-1) + "||_inf: " + str(inf_norm))
             plot_graph(vn, ite, v0)
         v0 = np.copy(vn)
 

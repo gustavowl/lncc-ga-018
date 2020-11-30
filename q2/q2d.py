@@ -90,16 +90,15 @@ def broyden(v0, debug=False):
 
     if (debug):
         print("\n===== Iteration #" + str(ite) + " =====")
-        #print("v_" + str(ite) + ":")
-        #print(vn)
-        #print("\nv_" + str(ite) + "/pi:")
-        #print(vn / np.pi)
-        latex = str(vn[0,0]/np.pi)
-        for i in range(1, len(vn)):
-            latex += " \\\\ " + str(vn[i,0]/np.pi)
-        print(latex)
-        print("||v_" + str(ite) + " - v_" + str(ite-1) + "||_2: " + str(inf_norm))
-        #plot_graph(vn, ite, prev)
+        print("v_" + str(ite) + ":")
+        print(vn)
+        print("\nv_" + str(ite) + "/pi:")
+        print(vn / np.pi)
+        #latex = str(vn[0,0]/np.pi)
+        #for i in range(1, len(vn)):
+        #    latex += " \\\\ " + str(vn[i,0]/np.pi)
+        #print(latex)
+        print("\n||v_" + str(ite) + " - v_" + str(ite-1) + "||_inf: " + str(inf_norm))
         plot_graph(vn, ite, vn - s)
 
     #step 4
@@ -129,16 +128,15 @@ def broyden(v0, debug=False):
 
         if (debug):
             print("\n===== Iteration #" + str(ite) + " =====")
-            #print("v_" + str(ite) + ":")
-            #print(vn)
-            #print("\nv_" + str(ite) + "/pi:")
-            #print(vn / np.pi)
-            latex = str(vn[0,0]/np.pi)
-            for i in range(1, len(vn)):
-                latex += " \\\\ " + str(vn[i,0]/np.pi)
-            print(latex)
-            print("||v_" + str(ite) + " - v_" + str(ite-1) + "||_2: " + str(inf_norm))
-            #plot_graph(vn, ite, prev)
+            print("v_" + str(ite) + ":")
+            print(vn)
+            print("\nv_" + str(ite) + "/pi:")
+            print(vn / np.pi)
+            #latex = str(vn[0,0]/np.pi)
+            #for i in range(1, len(vn)):
+            #    latex += " \\\\ " + str(vn[i,0]/np.pi)
+            #print(latex)
+            print("\n||v_" + str(ite) + " - v_" + str(ite-1) + "||_inf: " + str(inf_norm))
             plot_graph(vn, ite, vn - s)
 
     return vn, ite
